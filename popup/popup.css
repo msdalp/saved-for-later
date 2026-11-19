@@ -1,0 +1,10 @@
+:root { color-scheme: light dark; --bg: #fff; --fg: #15141a; --muted: #5b5b66; --hover: #f0f0f4; --accent: #0060df; --accent-hover: #0250bb; }
+@media (prefers-color-scheme: dark) { :root { --bg: #2b2a33; --fg: #fbfbfe; --muted: #bfbfc9; --hover: #3a3944; --accent: #00ddff; --accent-hover: #80ebff; } }
+body { margin: 0; padding: 8px; width: 240px; background: var(--bg); color: var(--fg); font: 13px system-ui, sans-serif; display: flex; flex-direction: column; gap: 6px; }
+button { all: unset; box-sizing: border-box; width: 100%; padding: 9px 12px; border-radius: 6px; cursor: pointer; display: flex; align-items: center; gap: 8px; }
+button:hover { background: var(--hover); }
+button.primary { background: var(--accent); color: var(--bg); font-weight: 600; }
+button.primary:hover { background: var(--accent-hover); }
+.ico { width: 16px; text-align: center; }
+.count { margin-left: auto; color: var(--muted); font-size: 12px; }
+.msg { color: var(--muted); font-size: 12px; padding: 2px 12px 4px; }

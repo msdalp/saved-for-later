@@ -1,0 +1,64 @@
+{
+  "manifest_version": 2,
+  "name": "Saved for Later",
+  "version": "1.1.0",
+  "description": "A simple read-later list in the sidebar. Done items are hidden, kept, and purged after 2 years.",
+  "icons": {
+    "48": "icons/icon.svg",
+    "96": "icons/icon.svg"
+  },
+  "permissions": [
+    "storage",
+    "tabs",
+    "alarms",
+    "contextMenus"
+  ],
+  "background": {
+    "scripts": [
+      "shared.js",
+      "background.js"
+    ]
+  },
+  "browser_action": {
+    "default_icon": "icons/icon-dark.svg",
+    "default_title": "Saved for Later",
+    "default_popup": "popup/popup.html",
+    "theme_icons": [
+      {
+        "light": "icons/icon-light.svg",
+        "dark": "icons/icon-dark.svg",
+        "size": 16
+      },
+      {
+        "light": "icons/icon-light.svg",
+        "dark": "icons/icon-dark.svg",
+        "size": 32
+      }
+    ]
+  },
+  "sidebar_action": {
+    "default_title": "Saved for Later",
+    "default_panel": "sidebar/sidebar.html",
+    "default_icon": "icons/icon.svg",
+    "open_at_install": false
+  },
+  "commands": {
+    "_execute_sidebar_action": {
+      "suggested_key": {
+        "default": "Alt+Shift+L"
+      },
+      "description": "Toggle the reading list sidebar"
+    }
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "saved-for-later@local",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
+    }
+  }
+}

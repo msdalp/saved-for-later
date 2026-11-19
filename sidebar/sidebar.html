@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="sidebar.css">
+</head>
+<body>
+  <header>
+    <input id="search" type="search" placeholder="Search saved pages">
+    <div class="tabs">
+      <button id="tab-unread" class="tab active">To read <span id="n-unread"></span></button>
+      <button id="tab-done" class="tab">Done <span id="n-done"></span></button>
+    </div>
+  </header>
+  <ul id="list"></ul>
+  <p id="empty" class="empty" hidden></p>
+  <footer id="foot" hidden>Done items are removed automatically 2 years after you mark them done. Your list syncs through Firefox Sync.</footer>
+  <script src="../shared.js"></script>
+  <script src="sidebar.js"></script>
+</body>
+</html>
